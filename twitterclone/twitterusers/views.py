@@ -8,7 +8,7 @@ from twitterclone.tweets.models import Tweet
 
 
 def userview(request, id):
-    html = 'users.html'
+    html = 'useronly.html'
 
     users = TwitterUser.objects.filter(id=id)
 
@@ -20,7 +20,7 @@ def userview(request, id):
                   {'users': users, 'userstweets': userstweets, 'following_count': following_count})
 
 def userform_view(request):
-    html = 'genericform.html'
+    html = 'formz.html'
 
     if request.method == 'POST':
         twitter_user_form = Add_User_form(request.POST)

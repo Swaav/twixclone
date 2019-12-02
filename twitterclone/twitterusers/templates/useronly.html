@@ -1,0 +1,20 @@
+<a href='/'>Home Page</a>
+<a href='/registeruserform/'>Join A Higher Power</a>
+<a href='/tweetform/'>Open Your Mind</a>
+<a href='/logout/'>Logout</a>
+
+<ul style='list-style:none'>
+    {% for data in users %}
+    <li>{{ data.user }}</li>
+    <li>
+        <button><a href='/following/{{ data.id }}/'>Follow</a></button>Following: {{ following_count }}
+    </li>
+    <li>
+        <button><a href='/unfollowing/{{ data.id }}/'>Unfollow</a></button>
+    </li>
+    {% endfor %}
+    {% for data in users_tweets %}
+    <li>{{ data.posts}}</li>
+    <li>{{ data.time_date }}</li>
+    {% endfor %}
+</ul>

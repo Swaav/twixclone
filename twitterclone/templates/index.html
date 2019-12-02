@@ -1,0 +1,16 @@
+<a href='/tweetform/'>Open Your Mind</a>
+<a href='/registeruserform/'>Join A Higher Power</a>
+<a href='/notifications/'>Spirit Awareness Occurrence{{ notify_count }}</a>
+<a href='/user/{{ user.twitteruser.id }}'>My Story</a>
+<a href='/login/'>Login</a>
+<a href='/logout/'>Logout</a>
+
+<ul style='list-style:none'>
+    {% for data in all_tweets %}
+        <li>
+            <a href='/user/{{ data.twitter_user.id }}/'>{{ data.twitter_user }}</a>
+        </li>
+        <li>{{data.posts}}</li>
+        <li>{{data.time_date}}</li>
+    {% endfor %}
+</ul>
