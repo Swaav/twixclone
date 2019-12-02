@@ -18,6 +18,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('notifications/', views.notify_user, name='notifications')
 ]

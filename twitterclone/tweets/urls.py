@@ -18,7 +18,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', views.index, name='homepage'),
     path('tweet/<int:id>/', views.tweet_view, name='tweet'),
     path('tweetform/', views.tweetform_view, name='tweetform')]
