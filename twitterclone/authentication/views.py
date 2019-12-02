@@ -51,7 +51,7 @@ def registeruser_form(request):
             )
             TwitterUser.objects.create(
                 user=user,
-                name=data['name']
+                # name=data['name']
             )
             return HttpResponseRedirect(reverse('homepage'))
 
